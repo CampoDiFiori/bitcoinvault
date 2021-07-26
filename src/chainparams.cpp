@@ -150,15 +150,20 @@ public:
         checkpointData = {
             {
             	// Fork from BitcoinRoyale
-            	{9570, uint256S("0x000000000000000a20b43b05e1fa36f504d5c284e7cb320e50b440715c89d8a2")},
+            	{ 9570, uint256S("000000000000000a20b43b05e1fa36f504d5c284e7cb320e50b440715c89d8a2")},
+            	{16826, uint256S("000000000000000001277513d6afcd65e44aaad16194d00fe8ca44d61d9fd772")},
+            	{33969, uint256S("000000000000000002d0524c3ca78348b363ba5a29daff0041b1423a8fd432e9")},
+            	{51271, uint256S("0000000000000000023ace9debee85d6e59687f124d44f24f37d420c9264f6b7")},
+            	{73381, uint256S("45220a83ddd4b2bc8a12c965123d647069b1f285fb9f63c4bb91b4fbdc4c863d")},
+            	{94371, uint256S("984b056287935af8e966a46c3baf162255357d4914d38666f0ef19ad505e45da")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data from rpc: getchaintxstats 4096 0000000000000000000f1c54590ee18d15ec70e68c8cd4cfbadb1b4f11697eee
-            /* nTime    */ 0,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0
+            /* nTime    */ 1627301072,
+            /* nTxCount */ 817047,
+            /* dTxRate  */ 0.003107190579487599
         };
         m_fallback_fee_enabled = true;
     }
@@ -247,13 +252,23 @@ public:
 
         checkpointData = {
             {
+                {     0, uint256S("01cead69f2b51e214e1c2cd50e3744428cae526db87b2ff8f32489ff801d0f1d")},
+                { 25636, uint256S("000000000003facc8363b128c53ed724c9558e7e70f8dade715d7dc4f302cb4f")},
+                { 58253, uint256S("0000000000002bc36866ab9dd3fa8f01cbd711a027718d6c6169314ce5566802")},
+                {111255, uint256S("000000000000168e58a179c1ec795524d947671ad078259fd28bc0b7ee9de00c")},
+                {178821, uint256S("fd25f58b22c908fe9bf96ff06858b3a7663c81e78b3d6ace14e54dc2558c7bf2")},
+                {241724, uint256S("7c46562ff47bb1f1883d2ec6acde4346cfe740b8d42f90bf77eda4c3cedd6673")},
+                {241724, uint256S("f904a21ff659fe7864e701f60e015d22d3ea458e9c6f177cad47fc2d1cf7f251")},
+                {336082, uint256S("d850652fb52f930ae9848f309df94fd680fc2c13c79bbea4cfcf12be8c9047c8")},
+                {365204, uint256S("d0ff42bf2197c45b616a8319de7cca6a7faa8833ccd846058720b855b5802cd4")},
+               
             }
         };
 
         chainTxData = ChainTxData{
-            /* nTime    */ 0,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0
+            /* nTime    */ 1627052095,
+            /* nTxCount */ 371852,
+            /* dTxRate  */ 0.0068261157325097
         };
 
         /* enable fallback fee on testnet */
@@ -334,7 +349,7 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("01cead69f2b51e214e1c2cd50e3744428cae526db87b2ff8f32489ff801d0f1d")},
+                {     0, uint256S("01cead69f2b51e214e1c2cd50e3744428cae526db87b2ff8f32489ff801d0f1d")},
             }
         };
 
