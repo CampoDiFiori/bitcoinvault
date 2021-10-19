@@ -10,6 +10,8 @@
 #include <serialize.h>
 #include <util/strencodings.h>
 
+#include <boost/algorithm/string/replace.hpp>
+
 #include <stdarg.h>
 
 #if (defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__))
@@ -1118,6 +1120,15 @@ fs::path GetSpecialFolderPath(int nFolder, bool fCreate)
 
     LogPrintf("SHGetSpecialFolderPathW() failed, could not obtain requested path.\n");
     return fs::path("");
+}
+#endif
+
+#ifndef WIN32
+std::string ShellEscape(const std::string& arg)
+{
+    std::string escaped = arg;
+    boost::replace_all(escaped, "'", "'\"'\"'");
+    return "'" + escaped + "'";
 }
 #endif
 
